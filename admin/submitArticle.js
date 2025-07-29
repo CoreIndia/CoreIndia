@@ -23,7 +23,7 @@ function submitArticle() {
   const imageUrl = document.getElementById("imageUrl").value;
   const content = quill.root.innerHTML;
 
-  fetch("YOUR_WEB_APP_URL_HERE", {
+  fetch(https://script.google.com/macros/s/AKfycby7D2_-U3sB49iKTvfh13WUhwTdX39_Y4AT7wPNg6VhcbF-KVFv3j7H63TbrNiaRu2t/exec, {
     method: "POST",
     body: JSON.stringify({
       title,
