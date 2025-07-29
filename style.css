@@ -28,20 +28,23 @@ a {
   flex-wrap: wrap;
 }
 
-.logo-img {
-  height: 50px;
+.logo-section, .tagline-section, .datetime-section {
+  flex: 1;
+  text-align: center;
 }
 
-.tagline-section h1 {
-  font-size: 22px;
-  text-align: center;
-  color: #444;
-  font-weight: 500;
+.logo-section {
+  text-align: left;
+}
+.logo-img {
+  height: 80px;
+  width: auto;
 }
 
 .datetime-section {
+  text-align: right;
   font-size: 14px;
-  color: #555;
+  color: #666;
 }
 
 /* Navbar */
