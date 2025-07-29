@@ -20,6 +20,18 @@
 </head>
 <body>
 
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const time = now.toLocaleTimeString();
+    const date = now.toLocaleDateString(undefined, options);
+    document.getElementById('datetime').innerText = `${date} | ${time}`;
+  }
+
+  setInterval(updateDateTime, 1000);
+  updateDateTime(); // Call once immediately
+</script>
 <!-- Header with logo, tagline and date -->
 <header class="site-header">
   <div class="header-left">
