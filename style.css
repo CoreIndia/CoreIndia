@@ -1,16 +1,1 @@
 body { font-family: Arial; margin: 0; padding: 0; }
-.hero-banner {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-.hero-banner img {
-  max-width: 100%;
-  height: auto;
-}
-.tagline {
-  font-size: 1.4rem;
-  font-style: italic;
-  margin-top: 10px;
-  color: #444;
-}
