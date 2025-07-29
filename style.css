@@ -73,3 +73,31 @@ main {
 .sidebar li {
   margin-bottom: 0.5rem;
 }
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a2e;
+  color: white;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #f1c40f;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  height: 60px;
+}
+
+.tagline-section h1 {
+  font-size: 1.2rem;
+  color: #f1c40f;
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+.datetime-section {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+}
