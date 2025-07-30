@@ -29,7 +29,7 @@ function submitArticle() {
     return;
   }
 
-  fetch("https://script.google.com/macros/s/AKfycby7D2_-U3sB49iKTvfh13WUhwTdX39_Y4AT7wPNg6VhcbF-KVFv3j7H63TbrNiaRu2t/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby9Q82zbJoPT6h2GtoISRB-qOzxuE-7CACTc2I4cquplF-bHBdr3JeXg1-1WykZ1oIzIQ/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
