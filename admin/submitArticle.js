@@ -22,7 +22,7 @@ function submitArticle() {
   const imageUrl = document.getElementById("imageUrl").value;
   const content = quill.root.innerHTML;
 
-  fetch("https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby9Q82zbJoPT6h2GtoISRB-qOzxuE-7CACTc2I4cquplF-bHBdr3JeXg1-1WykZ1oIzIQ/exec", {
     method: "POST",
     body: JSON.stringify({ title, category, imageUrl, content }),
     headers: { "Content-Type": "application/json" },
