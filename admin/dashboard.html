@@ -6,10 +6,22 @@
   <title>CoreIndia Admin Dashboard</title>
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"/>
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; }
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #fffbe6; }
     .form-group { margin-bottom: 1rem; }
-    #editor { height: 200px; }
-    #preview { border: 1px solid #ccc; padding: 1rem; margin-top: 2rem; display: none; background: #fafafa; }
+    #editor { height: 250px; background-color: white; }
+    #preview {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-top: 2rem;
+      display: none;
+      background: #fafafa;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      margin-right: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -52,7 +64,45 @@
     <div id="previewContent"></div>
   </div>
 
+  <!-- Include Quill JS -->
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-  <script src="submitArticle.js"></script>
+
+  <!-- Initialize Quill -->
+  <script>
+    const quill = new Quill('#editor', {
+      theme: 'snow',
+      placeholder: 'Paste or write your article content here...',
+    });
+
+    function previewArticle() {
+      const title = document.getElementById('title').value;
+      const category = document.getElementById('category').value;
+      const imageUrl = document.getElementById('imageUrl').value;
+      const content = quill.root.innerHTML;
+
+      document.getElementById('previewTitle').innerText = title;
+      document.getElementById('previewCategory').innerText = category;
+      document.getElementById('previewImage').src = imageUrl;
+      document.getElementById('previewContent').innerHTML = content;
+
+      document.getElementById('preview').style.display = 'block';
+    }
+
+    function submitArticle() {
+      const title = document.getElementById('title').value;
+      const category = document.getElementById('category').value;
+      const imageUrl = document.getElementById('imageUrl').value;
+      const content = quill.root.innerHTML;
+
+      // Here you would call your backend or Google Sheets API
+      console.log("Publishing Article:");
+      console.log("Title:", title);
+      console.log("Category:", category);
+      console.log("Image URL:", imageUrl);
+      console.log("Content:", content);
+
+      alert("✅ Article submitted (console.log for now)!");
+    }
+  </script>
 </body>
 </html>
