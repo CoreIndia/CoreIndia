@@ -215,3 +215,19 @@ footer {
   height: auto;
   margin-top: 10px;
 }
+#bottom-banner {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+footer {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 14px;
+  color: #444;
+}
+
