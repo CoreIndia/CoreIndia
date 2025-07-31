@@ -1,0 +1,34 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+header {
+  background: red;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+footer {
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+article {
+  border-bottom: 1px solid #ccc;
+  padding: 1em;
+}
+button {
+  background: yellow;
+  color: black;
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+}
