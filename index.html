@@ -3,74 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CoreIndia News</title>
+  <title>CoreIndia - Straight to the core of every story</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <div class="menu-icon">&#9776;</div>
-      <div class="logo">📰 CoreIndia</div>
-      <div class="tagline">Straight to the core of every story</div>
-      <div class="right-info">
-        <span id="dateTime"></span> | <span id="weather"></span>
-      </div>
+  <header class="top-bar">
+    <div class="hamburger">&#9776;</div>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="tagline">Straight to the core of every story</div>
+    <div class="top-info">
+      <span id="datetime"></span> |
+      <span id="weather">New Delhi</span>
     </div>
-    <nav class="beats">
-      <button data-beat="all">All</button>
-      <button data-beat="national">National</button>
-      <button data-beat="politics">Politics</button>
-      <button data-beat="crime">Crime</button>
-      <button data-beat="entertainment">Entertainment</button>
-      <button data-beat="sports">Sports</button>
-      <button data-beat="international">International</button>
-      <button data-beat="business">Business</button>
-      <button data-beat="technology">Technology</button>
-    </nav>
   </header>
 
-  <main>
-    <section class="latest-news">
-      <h2>🗞️ Latest News</h2>
-      <div class="article-card" data-beat="politics">Political headline sample</div>
-      <div class="article-card" data-beat="sports">Sports news update</div>
-      <div class="article-card" data-beat="entertainment">Bollywood latest buzz</div>
-    </section>
+  <nav class="beats">
+    <button>National</button>
+    <button>Politics</button>
+    <button>Crime</button>
+    <button>Entertainment</button>
+    <button>Sports</button>
+    <button>International</button>
+    <button>Business</button>
+    <button>Technology</button>
+  </nav>
 
-    <section class="video-section">
-      <h2>🎥 Videos</h2>
-      <p>Video highlights will be embedded here.</p>
-    </section>
+  <section class="latest-news">
+    <h2>🕘 Latest News</h2>
+    <div class="article-box">Sample latest article content...</div>
+  </section>
 
-    <section class="subscribe-section">
-      <h2>📬 Subscribe to Our Newsletter</h2>
-      <input type="email" placeholder="Enter your email" />
-      <button>Subscribe</button>
-    </section>
+  <section class="headlines">
+    <h2>🗞️ Headlines</h2>
+    <div class="article-box">Important headline content...</div>
+  </section>
 
-    <section class="comment-section">
-      <h2>💬 Leave a Comment</h2>
-      <textarea placeholder="Write your thoughts..."></textarea>
-      <button>Post Comment</button>
-    </section>
-  </main>
+  <section class="videos">
+    <h2>🎥 Videos</h2>
+    <div class="video-box">Embed YouTube or local videos here.</div>
+  </section>
+
+  <section class="newsletter">
+    <h3>📬 Subscribe to our Newsletter</h3>
+    <input type="email" placeholder="Your email address" />
+    <button>Subscribe</button>
+  </section>
+
+  <section class="comments">
+    <h3>💬 Leave a Comment</h3>
+    <textarea placeholder="Write something..."></textarea>
+    <button>Post Comment</button>
+  </section>
 
   <footer>
-    <div class="footer-links">
-      <a href="#">About Us</a>
-      <a href="#">Follow Us</a>
-      <a href="#">Privacy Policy</a>
-    </div>
-    <div class="banner">🔴 COREINDIA FOOTER BANNER</div>
+    <p>📘 About Us | 📲 Follow Us | 🛡 Privacy Policy</p>
   </footer>
 
-  <div id="menuDropdown" class="menu-dropdown">
-    <a href="#">Home</a>
-    <a href="#">Videos</a>
-    <a href="#">Beats</a>
-    <a href="#">Follow Us</a>
-  </div>
-
-  <script src="script.js"></script>
+  <img src="banner.png" alt="Bottom Banner" class="footer-banner" />
 </body>
 </html>
