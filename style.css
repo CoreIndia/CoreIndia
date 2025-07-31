@@ -1,27 +1,35 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Header */
 .top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f4f4f4;
-  padding: 10px 15px;
-  border-bottom: 1px solid #ccc;
+  padding: 15px 20px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
-.hamburger {
-  font-size: 28px;
+.menu-icon {
+  font-size: 24px;
   cursor: pointer;
 }
 
 .logo {
-  height: 50px;
-  margin: 0 10px;
+  height: 40px;
+  margin-left: 15px;
 }
 
 .tagline {
@@ -29,82 +37,181 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: 18px;
-  color: #333;
+  color: #c62828;
 }
 
-.top-info {
+.datetime-weather {
   font-size: 14px;
+  text-align: right;
   color: #555;
-  white-space: nowrap;
 }
 
+/* Hamburger Menu */
+.side-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 180px;
+  z-index: 1000;
+}
+
+.side-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.side-menu a:hover {
+  background: #f0f0f0;
+}
+
+/* Beats Nav */
 .beats {
-  background: #e5e5e5;
-  padding: 10px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #ccc;
+  overflow-x: auto;
+  padding: 10px;
+  background: #e3f2fd;
+  border-bottom: 2px solid #90caf9;
 }
 
 .beats button {
-  background: #fff;
-  border: 1px solid #ccc;
+  margin: 0 8px;
   padding: 8px 14px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
+  flex-shrink: 0;
 }
 
 .beats button:hover {
-  background: #007bff;
-  color: #fff;
+  background: #0d47a1;
 }
 
-section {
+/* Main Sections */
+main {
   padding: 20px;
-  border-bottom: 1px solid #ddd;
 }
 
-.article-box, .video-box {
-  background: #fafafa;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin-top: 10px;
+.latest-news, .headlines, .videos, .subscribe, .comments {
+  margin-bottom: 40px;
 }
 
-.newsletter input {
-  padding: 10px;
-  width: 60%;
-  max-width: 400px;
-  margin-right: 10px;
+.latest-news h2, .headlines h2, .videos h2, .subscribe h2, .comments h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e53935;
+  padding-bottom: 5px;
+  color: #e53935;
 }
 
-.newsletter button, .comments button {
-  padding: 10px 20px;
-  font-weight: bold;
-  background: #dc3545;
-  color: white;
+.latest-news article, .headlines ul li {
+  margin-bottom: 15px;
+}
+
+.headlines ul {
+  list-style: disc inside;
+}
+
+/* Videos */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  height: 200px;
   border: none;
+}
+
+/* Subscribe */
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.subscribe input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.subscribe button {
+  padding: 10px;
+  background: #fbc02d;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.comments textarea {
-  width: 100%;
-  height: 80px;
-  padding: 10px;
-  margin-top: 10px;
+.subscribe button:hover {
+  background: #f9a825;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #222;
+/* Comments */
+.comments form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments input, .comments textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.comments button {
+  background: #4caf50;
   color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comments button:hover {
+  background: #388e3c;
+}
+
+/* Footer */
+footer {
+  background: #eeeeee;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #ccc;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-banner {
-  width: 100%;
-  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
 }
