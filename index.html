@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CoreIndia - Straight to the core of every story</title>
+  <title>CoreIndia</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Top Header -->
   <header class="top-bar">
-    <div class="hamburger">&#9776;</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <img src="logo.png" alt="Logo" class="logo" />
     <div class="tagline">Straight to the core of every story</div>
-    <div class="top-info">
-      <span id="datetime"></span> |
-      <span id="weather">New Delhi</span>
+    <div class="datetime-weather">
+      <span id="datetime"></span> | New Delhi
     </div>
   </header>
 
+  <!-- Hamburger Menu -->
+  <nav id="menu" class="side-menu">
+    <a href="#">Home</a>
+    <a href="#">Video</a>
+    <a href="#">Beats</a>
+    <a href="#">Follow Us</a>
+  </nav>
+
+  <!-- Beats -->
   <nav class="beats">
     <button>National</button>
     <button>Politics</button>
@@ -29,37 +38,67 @@
     <button>Technology</button>
   </nav>
 
-  <section class="latest-news">
-    <h2>🕘 Latest News</h2>
-    <div class="article-box">Sample latest article content...</div>
-  </section>
+  <main>
+    <!-- Latest News -->
+    <section class="latest-news">
+      <h2>🕒 Latest News</h2>
+      <article>
+        <h3>Government launches AI-powered portal for students</h3>
+        <p>A major step toward education reform and smart learning...</p>
+      </article>
+      <article>
+        <h3>Monsoon floods disrupt life in Mumbai</h3>
+        <p>Heavy rains bring traffic chaos, schools closed...</p>
+      </article>
+    </section>
 
-  <section class="headlines">
-    <h2>🗞️ Headlines</h2>
-    <div class="article-box">Important headline content...</div>
-  </section>
+    <!-- Headlines -->
+    <section class="headlines">
+      <h2>📢 Headlines</h2>
+      <ul>
+        <li>New bill proposes stricter cybercrime laws</li>
+        <li>Schools reopen in flood-hit areas of Assam</li>
+        <li>Sensex jumps 500 points amid positive global cues</li>
+        <li>India wins gold in Asian Games wrestling event</li>
+      </ul>
+    </section>
 
-  <section class="videos">
-    <h2>🎥 Videos</h2>
-    <div class="video-box">Embed YouTube or local videos here.</div>
-  </section>
+    <!-- Videos -->
+    <section class="videos">
+      <h2>🎥 Videos</h2>
+      <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
-  <section class="newsletter">
-    <h3>📬 Subscribe to our Newsletter</h3>
-    <input type="email" placeholder="Your email address" />
-    <button>Subscribe</button>
-  </section>
+    <!-- Subscription Box -->
+    <section class="subscribe">
+      <h2>📬 Subscribe to Our Newsletter</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
 
-  <section class="comments">
-    <h3>💬 Leave a Comment</h3>
-    <textarea placeholder="Write something..."></textarea>
-    <button>Post Comment</button>
-  </section>
+    <!-- Comments -->
+    <section class="comments">
+      <h2>💬 Leave a Comment</h2>
+      <form>
+        <input type="text" placeholder="Your name" required />
+        <textarea placeholder="Your comment..." required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>📘 About Us | 📲 Follow Us | 🛡 Privacy Policy</p>
+    <div class="footer-links">
+      <a href="#">About Us</a> | 
+      <a href="#">Follow Us</a> | 
+      <a href="#">Privacy Policy</a>
+    </div>
+    <img src="banner.png" alt="Footer Banner" class="footer-banner"/>
   </footer>
-
-  <img src="banner.png" alt="Bottom Banner" class="footer-banner" />
 </body>
 </html>
