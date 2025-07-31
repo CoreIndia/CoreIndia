@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoreIndia News</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="menu-icon">&#9776;</div>
+      <div class="logo">📰 CoreIndia</div>
+      <div class="tagline">Straight to the core of every story</div>
+      <div class="right-info">
+        <span id="dateTime"></span> | <span id="weather"></span>
+      </div>
+    </div>
+    <nav class="beats">
+      <button data-beat="all">All</button>
+      <button data-beat="national">National</button>
+      <button data-beat="politics">Politics</button>
+      <button data-beat="crime">Crime</button>
+      <button data-beat="entertainment">Entertainment</button>
+      <button data-beat="sports">Sports</button>
+      <button data-beat="international">International</button>
+      <button data-beat="business">Business</button>
+      <button data-beat="technology">Technology</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="latest-news">
+      <h2>🗞️ Latest News</h2>
+      <div class="article-card" data-beat="politics">Political headline sample</div>
+      <div class="article-card" data-beat="sports">Sports news update</div>
+      <div class="article-card" data-beat="entertainment">Bollywood latest buzz</div>
+    </section>
+
+    <section class="video-section">
+      <h2>🎥 Videos</h2>
+      <p>Video highlights will be embedded here.</p>
+    </section>
+
+    <section class="subscribe-section">
+      <h2>📬 Subscribe to Our Newsletter</h2>
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </section>
+
+    <section class="comment-section">
+      <h2>💬 Leave a Comment</h2>
+      <textarea placeholder="Write your thoughts..."></textarea>
+      <button>Post Comment</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Follow Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <div class="banner">🔴 COREINDIA FOOTER BANNER</div>
+  </footer>
+
+  <div id="menuDropdown" class="menu-dropdown">
+    <a href="#">Home</a>
+    <a href="#">Videos</a>
+    <a href="#">Beats</a>
+    <a href="#">Follow Us</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
