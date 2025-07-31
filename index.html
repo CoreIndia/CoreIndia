@@ -1,100 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CoreIndia News</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="topbar">
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <img src="assets/logo.png" alt="CoreIndia Logo" class="logo"/>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <img src="logo.png" alt="CoreIndia Logo" class="logo">
       <div class="tagline">Straight to the core of every story</div>
-      <div class="info-box">
-        <span id="dateTime"></span> |
-        <span>New Delhi Weather: <span id="weather">☀️ 32°C</span></span>
+      <div class="datetime-weather">
+        <div id="datetime"></div>
+        <div id="weather"></div>
       </div>
     </div>
-    <nav id="mainMenu" class="hidden">
+    <nav id="menu" class="hidden">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="video.html">Video</a></li>
+        <li><a href="#videos">Video</a></li>
         <li class="dropdown">
-          <a href="#">Beats ▼</a>
-          <ul class="submenu">
-            <li><a href="?beat=National">National</a></li>
-            <li><a href="?beat=Politics">Politics</a></li>
-            <li><a href="?beat=Crime">Crime</a></li>
-            <li><a href="?beat=Entertainment">Entertainment</a></li>
-            <li><a href="?beat=Sports">Sports</a></li>
-            <li><a href="?beat=International">International</a></li>
-            <li><a href="?beat=Business">Business</a></li>
-            <li><a href="?beat=Technology">Technology</a></li>
-          </ul>
+          <a href="#">Beats</a>
+          <div class="dropdown-content">
+            <a href="#national">National</a>
+            <a href="#politics">Politics</a>
+            <a href="#crime">Crime</a>
+            <a href="#entertainment">Entertainment</a>
+            <a href="#sports">Sports</a>
+            <a href="#international">International</a>
+            <a href="#business">Business</a>
+            <a href="#technology">Technology</a>
+          </div>
         </li>
         <li class="dropdown">
-          <a href="#">Follow Us ▼</a>
-          <ul class="submenu">
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-          </ul>
+          <a href="#">Follow Us</a>
+          <div class="dropdown-content">
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+          </div>
         </li>
       </ul>
     </nav>
-    <div class="beats-bar">
-      <button onclick="filterByBeat('National')">National</button>
-      <button onclick="filterByBeat('Politics')">Politics</button>
-      <button onclick="filterByBeat('Crime')">Crime</button>
-      <button onclick="filterByBeat('Entertainment')">Entertainment</button>
-      <button onclick="filterByBeat('Sports')">Sports</button>
-      <button onclick="filterByBeat('International')">International</button>
-      <button onclick="filterByBeat('Business')">Business</button>
-      <button onclick="filterByBeat('Technology')">Technology</button>
-    </div>
   </header>
 
+  <!-- Beat Filters -->
+  <div class="beat-filters">
+    <button onclick="filterByBeat('national')">National</button>
+    <button onclick="filterByBeat('politics')">Politics</button>
+    <button onclick="filterByBeat('crime')">Crime</button>
+    <button onclick="filterByBeat('entertainment')">Entertainment</button>
+    <button onclick="filterByBeat('sports')">Sports</button>
+    <button onclick="filterByBeat('international')">International</button>
+    <button onclick="filterByBeat('business')">Business</button>
+    <button onclick="filterByBeat('technology')">Technology</button>
+  </div>
+
+  <!-- Main Content -->
   <main>
-    <section id="latestNews">
+    <section id="latest-news">
       <h2>Latest News</h2>
-      <div id="articles"></div>
+      <div class="articles" id="news-container">
+        <!-- News articles go here -->
+      </div>
     </section>
 
     <section id="headlines">
-      <h3>More Headlines</h3>
-      <ul id="headlineList"></ul>
+      <h2>Headlines</h2>
+      <ul id="headline-list">
+        <!-- Headlines go here -->
+      </ul>
     </section>
 
-    <section id="videoSection">
-      <h2>Watch Latest Videos</h2>
-      <div id="videoGallery"></div>
+    <section id="videos">
+      <h2>Latest Videos</h2>
+      <div id="video-container">
+        <!-- Video embeds -->
+      </div>
     </section>
 
-    <section id="subscribeComment">
-      <div class="subscription-box">
-        <h3>Subscribe to our Newsletter</h3>
+    <section id="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form>
         <input type="email" placeholder="Enter your email">
-        <button>Subscribe</button>
-      </div>
-      <div class="comment-box">
-        <h3>Leave a Comment</h3>
-        <textarea placeholder="Write your comment..."></textarea>
-        <button>Post Comment</button>
-      </div>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <section id="comments">
+      <h2>Leave a Comment</h2>
+      <textarea placeholder="Write your comment..."></textarea>
+      <button>Post Comment</button>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <a href="#">About Us</a> |
-      <a href="#">Privacy Policy</a> |
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
       <a href="#">Follow Us</a>
     </div>
-    <img src="assets/banner.png" class="bottom-banner" alt="Banner"/>
+    <img src="banner.jpg" alt="Bottom Banner" class="footer-banner">
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
