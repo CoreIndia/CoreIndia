@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CoreIndia CMS Admin</title>
+  <title>CoreIndia CMS</title>
   <link rel="stylesheet" href="cms-style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Post a News Article</h1>
-    <form id="newsForm">
-      <label>Headline:</label>
-      <input type="text" id="headline" required>
 
-      <label>Beat/Category:</label>
-      <select id="beat" required>
+  <div class="container">
+    <h1>📝 Publish New Article</h1>
+    <form id="cmsForm">
+
+      <label for="title">Headline</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="beat">Beat/Category</label>
+      <select id="beat" name="beat" required>
+        <option value="">-- Select Beat --</option>
         <option value="National">National</option>
         <option value="Politics">Politics</option>
         <option value="Crime">Crime</option>
@@ -24,21 +27,23 @@
         <option value="Technology">Technology</option>
       </select>
 
-      <label>Video Link (YouTube):</label>
-      <input type="url" id="video">
+      <label for="videoUrl">Video URL (Optional)</label>
+      <input type="url" id="videoUrl" name="videoUrl">
 
-      <label>Slug (URL identifier):</label>
-      <input type="text" id="slug" placeholder="example-news-headline">
+      <label for="slug">Slug (For URL)</label>
+      <input type="text" id="slug" name="slug" placeholder="e.g., modi-addresses-un">
 
-      <label>Image URL:</label>
-      <input type="url" id="image" placeholder="https://example.com/image.jpg">
+      <label for="imageUrl">Image URL</label>
+      <input type="url" id="imageUrl" name="imageUrl" placeholder="https://example.com/image.jpg">
 
-      <label>Content:</label>
-      <textarea id="content" required></textarea>
+      <label for="imageUpload">Upload Image</label>
+      <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
 
-      <button type="submit">Publish</button>
+      <label for="content">Article Content</label>
+      <textarea id="content" name="content" required></textarea>
+
+      <button type="submit">📤 Publish Article</button>
     </form>
-    <div id="statusMsg"></div>
   </div>
 
   <script src="cms-script.js"></script>
